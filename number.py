@@ -8,9 +8,6 @@ def get_google_doc_content(doc_url):
     table = soup.find('table')
     return  str(table)
 
-def parse_unicode_grid(doc_text):
-    grid_data = []
-
     # Split into lines and skip header
     lines = doc_text.split('/tr')
     for line in lines[1:]:  # skip header line
